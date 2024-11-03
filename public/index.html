@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOL/USDT Signal App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Background Video -->
+        <video autoplay muted loop playsinline id="background-video">
+            <source src="https://videocdn.cdnpk.net/videos/db27b343-4abd-5754-b346-515677b3b93e/horizontal/previews/clear/large.mp4?token=exp=1730441245~hmac=0985a237deea365d5c48f43022f44f9cae521296d81d8740a6d268074449c9a1" type="video/mp4">
+            <!-- Fallback for unsupported video -->
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Welcome Section -->
+        <section id="welcome" class="section">
+            <h1>Welcome to SOL/USDT Signals</h1>
+            <p>Trade at your own risk. Click below to proceed.</p>
+            <button onclick="showSignal()">Get Started</button>
+        </section>
+
+        <!-- Signal Section -->
+        <section id="signal" class="section hidden">
+            <h2>Your SOL/USDT Buy Signal</h2>
+            <div id="current-price">Loading current price...</div>
+            <div id="signal-output">Loading signal...</div>
+            <p id="buy-sell-guide"></p>
+            <button onclick="backToWelcome()">Back to home</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

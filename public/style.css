@@ -1,0 +1,91 @@
+/* Basic styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #ffffff;
+    text-align: center;
+    overflow: hidden;
+    background-color: #0d0d0d;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1; /* Ensures content is above the video */
+    flex-direction: column;
+}
+
+/* Background Video */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1; /* Ensures video stays behind other content */
+}
+
+/* Section Styling */
+.section {
+    background-color: rgba(0, 0, 0, 0.75); /* Slight transparency for readability */
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 80%;
+    margin: auto;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+h1, h2 {
+    font-weight: 700;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #f5f5f5;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.5em;
+    color: #d0d0d0;
+}
+
+button {
+    padding: 12px 24px;
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(135deg, #1a73e8, #5499f7);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #5499f7, #1a73e8);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+#current-price, #signal-output {
+    font-size: 1.3em;
+    font-weight: 500;
+    color: #ffffff;
+    margin-top: 15px;
+}
