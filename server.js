@@ -7,13 +7,8 @@ const path = require('path');
 
 const app = express();
 
-// Serve static files from the 'public' directory (adjust if your files are elsewhere)
+// Serve static files from the 'public' directory
 app.use(express.static(path.join(__dirname, 'public')));
-
-// Route to serve the HTML file (if not using the 'public' directory)
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
 
 // API route to fetch SOL/USDT market data
 app.get('/api/signal', async (req, res) => {
@@ -41,5 +36,5 @@ app.get('/api/signal', async (req, res) => {
 // Start the server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+    console.log(`Server is running on port ${PORT}`);
 });
